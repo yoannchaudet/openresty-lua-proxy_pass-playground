@@ -1,0 +1,11 @@
+services:
+  pages-fe:
+    image: pages-fe:latest
+    ports:
+      - "2511:80"
+    depends_on:
+      - pages-dfs
+  pages-dfs:
+    image: pages-dfs:latest
+    ports:
+      - "2512:80"
