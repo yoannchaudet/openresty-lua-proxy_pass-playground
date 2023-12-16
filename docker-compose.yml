@@ -3,3 +3,4 @@ services:
     image: pages:latest
     ports:
       - "2511:80"
+    entrypoint: "/bin/sh -c 'nginx ; echo 'start' >> /var/log/nginx-errors.log && tail -f /var/log/nginx-errors.log'"
